@@ -12,7 +12,7 @@
     "properties": {
     "mode": "Incremental",
     "templateLink": {
-      "uri": "[concat(uri(deployment().properties.templateLink.uri, 'helloworld.json'), parameters('containerSasToken'))]",
+      "uri": "[uri(deployment().properties.templateLink.uri, 'helloworld.json')]",
       "contentVersion": "1.0.0.0"
     }
     }
