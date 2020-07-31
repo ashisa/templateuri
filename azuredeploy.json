@@ -12,12 +12,16 @@
     "properties": {
     "mode": "Incremental",
     "templateLink": {
-      "uri": "[uri(deployment().properties.templateLink.uri, 'helloworld.json')]",
+      "uri": "[uri(deployment().properties.templateLink.uri, 'subdirectory/helloworld.json')]",
       "contentVersion": "1.0.0.0"
     }
     }
   }
   ],
   "outputs": {
+    "Uri": {
+    "type": "string",
+    "value": "[uri(deployment().properties.templateLink.uri, 'subdirectory/helloworld.json')]"
+    }
   }
 }
