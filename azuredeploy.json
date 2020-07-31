@@ -5,18 +5,6 @@
   "containerSasToken": { "type": "securestring" }
   },
   "resources": [
-  {
-    "type": "Microsoft.Resources/deployments",
-    "apiVersion": "2019-10-01",
-    "name": "linkedTemplate",
-    "properties": {
-    "mode": "Incremental",
-    "templateLink": {
-      "uri": "[uri(deployment().properties.templateLink.uri, 'subdirectory/helloworld.json')]",
-      "contentVersion": "1.0.0.0"
-    }
-    }
-  }
   ],
   "outputs": {
     "Uri": {
